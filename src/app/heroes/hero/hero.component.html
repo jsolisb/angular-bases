@@ -1,0 +1,41 @@
+<h1>{{name}}</h1>
+
+<!-- El elemento dl especifica una lista de definiciones.
+     Una entrada en la lista se crea utilizando el elemento dt para el término definido
+     y el elemento dd para la definición del término.
+    El elemento HTML <dt> especifica un término en una descripción o lista de definiciones,
+      y como tal debe utilizarse dentro de un elemento <dl> Es usualmente seguido por un elemento <dd>-->
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Método:</td>
+  <dd>{{  getHeroDescription()}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{capitalizeName}}</dd>
+</dl>
+
+<button
+*ngIf="name!=='Spiderman'"
+class="btn btn-primary mx-2"
+(click)="changeHero()">
+Cambiar nombre
+</button>
+
+
+<button
+*ngIf="age!==30"
+class="btn btn-primary"
+(click)=" changeAge()">
+Cambiar edad
+</button>
+
+<button
+class="btn btn-primary mx-2"
+(click)=" resetForm()">
+Resetear
+</button>
